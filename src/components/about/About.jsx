@@ -23,28 +23,28 @@ export default function About() {
 
           <div className="container-box">
           <div className="box">
-            <img src="../../../my-portfolio/assets/images/languages/html.png" alt="" />
+            <img src="../../../port-ig/assets/images/languages/html.png" alt="" />
             <p>HTML</p>
           </div>
           </div>
 
           <div className="container-box">
           <div className="box">
-            <img src="../../../my-portfolio/assets/images/languages/sass.png" alt="" />
+            <img src="../../../port-ig/assets/images/languages/sass.png" alt="" />
             <p>SASS</p>
           </div>
           </div>
 
           <div className="container-box">
           <div className="box">
-            <img src="../../../my-portfolio/assets/images/languages/js.png" alt="" />
+            <img src="../../../port-ig/assets/images/languages/js.png" alt="" />
             <p>JavaScript</p>
           </div>
           </div>
 
           <div className="container-box">
           <div className="box">
-            <img src="../../../my-portfolio/assets/images/languages/reactjs.png" alt="" />
+            <img src="../../../port-ig/assets/images/languages/reactjs.png" alt="" />
             <p>React Js</p>
           </div>
           </div>
