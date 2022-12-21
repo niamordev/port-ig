@@ -1,0 +1,16 @@
+.blue-text{
+  color: $blue;
+}
+
+#root{
+  width: 90%;
+  margin: auto;
+  max-width: 1000px;
+  padding-bottom: 40px;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}

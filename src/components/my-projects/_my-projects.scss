@@ -1,0 +1,173 @@
+#myProjects {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 0 100px 0;
+  padding-top: 100px;
+
+  .container-project {
+  }
+  .title {
+    width: fit-content;
+    border-bottom: 4px solid $blue;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    button {
+      background: transparent;
+      border: none;
+      padding: 10px 10px;
+      transition: 0.4s;
+      cursor: pointer;
+      position: relative;
+      font-size: 1rem;
+      font-weight: 700;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 10%;
+        height: 2px;
+        background-color: $colorBorder;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.4s;
+      }
+
+      &:hover::after {
+        background-color: $blue;
+        width: 100%;
+      }
+    }
+
+    .btn-filter-selected {
+      color: $blue;
+      &::after {
+        background-color: $blue;
+        width: 100%;
+      }
+    }
+  }
+
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  .all-projects {
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px 20px;
+
+    .container-project {
+      overflow: hidden;
+      transition: 0.3s;
+      background-color: $newWhite;
+      border-radius: 10px;
+    }
+
+    .links-to-projects {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .container-project:hover {
+    }
+    img {
+      width: 100%;
+    }
+
+    .description {
+      padding: 20px;
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: left;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      height: 140px;
+
+      .description-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          width: 0%;
+          height: 2px;
+          background-color: $blue;
+          transform: translateX(-50%);
+          left: 50%;
+          transition: .4s;
+        }
+
+        &:hover{
+          &::before {
+            width: 90%;
+          }
+        }
+        img {
+          width: 20px;
+        }
+      }
+
+      .open-project {
+        color: $text;
+
+        &::before{
+          background-color: $text;
+        }
+      }
+
+      .tags {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      .tags p {
+        color: $newPurple;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+
+    .important-project {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      rotate: -20deg;
+      background-color: white;
+      border: 2px solid #252525;
+      color: #252525;
+      font-size: 1.4rem;
+      padding: 0.3rem;
+      font-weight: bolder;
+      z-index: 10;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #myProjects {
+  }
+}

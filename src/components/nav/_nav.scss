@@ -1,0 +1,157 @@
+header {
+  position: fixed;
+  z-index: 1;
+  background: $newWhite;
+  padding: 20px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.177);
+}
+
+
+
+.logo {
+  position: absolute;
+  top:14px;
+  left: 14px;
+  z-index: 3;
+  height: 150px;
+}
+
+nav {
+  .navbar-brand {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    z-index: 4;
+    cursor: pointer;
+
+    .line {
+      width: 100%;
+      height: 2px;
+      transition: 0.4s;
+      background-color: $blue;
+    }
+  }
+
+  .navMobileActive {
+    :nth-child(1) {
+      display: none;
+    }
+
+    :nth-child(2) {
+      position: absolute;
+      rotate: 45deg;
+    }
+
+    :nth-child(3) {
+      position: absolute;
+      rotate: 135deg;
+    }
+  }
+
+  ul {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-evenly;
+
+    img {
+      width: 30px;
+    }
+
+    .active {
+      transition: 2s;
+      border-bottom: 2px solid $colorBorder;
+    }
+  }
+
+  .nav-mobile {
+    display: none;
+    transform: translateX(-150vw);
+    transition: .4s;
+  }
+
+  .content-nav-mobile {
+    z-index: 3;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: $newWhite;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 100px 10px 15px 15px;
+    justify-content: unset;
+    gap: 20px;
+    width: 170px;
+    transform: translateX(0);
+    transition: .4s;
+    border-left: 3px solid rgba(0, 0, 0, 0.034);
+
+    a {
+      color: $text;
+      font-size: 1.1rem;
+      transition: .2s;
+
+      &:hover {
+        border-left: 2px solid $blue;
+        border-bottom: 0;
+        padding: 5px 10px;
+      }
+    }
+  }
+  .nav-large-screen{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .navbar-brand {
+    display: none !important;
+  }
+
+  .logo {
+    top:22px;
+    left: 24px;
+  }
+
+
+  .nav-large-screen {
+    display: flex !important;
+    justify-content: flex-end;
+    gap: 30px;
+
+    a {
+      color: $text;
+      padding: 10px;
+      transition: 0.1s;
+    }
+
+    a:hover {
+      color: $blue;
+      border-bottom: 3px solid $blue;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 1144px) {
+  header {
+    .logo {
+    }
+  }
+}

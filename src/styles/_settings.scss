@@ -1,0 +1,75 @@
+// imports fonts
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+$colorComponentsOpacityWeak: #49429800;
+$colorComponents: #494298;
+$colorBorder: rgba(255, 255, 255, 0.487);
+$colorBlack: #040307;
+$white: #fff;
+$blue: #5e50fb;
+$text: #3b3b3b;
+$black1 :#13171b;
+$black2 : #171b20;
+$black3 :#21262e;
+
+
+
+
+$newWhite : rgb(245, 245, 245);
+$newDarkPurple : #5e50fb;
+$newPurple : #8c82fc;
+$newLightPurple : #bab4fd;
+$newCream : #e6e6e6;
+$newVeryLightPurple : #e8e6fe;
+
+
+* {
+  margin: 0%;
+  padding: 0%;
+  text-decoration: none;
+  list-style: none;
+  max-width: 100%;
+  color: $text;
+}
+
+*,::after,::before{
+  box-sizing: inherit;
+
+}
+
+a {
+  color: $blue;
+}
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Dm sans", sans-serif;
+  background-color: $colorBlack;
+  overflow-x: hidden;
+  width: 100vw;
+  background-color: $newCream;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+
+
+@media screen and (min-width: 1144px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
